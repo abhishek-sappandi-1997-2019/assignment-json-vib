@@ -23,7 +23,7 @@ export const updatepost = (id,obj) => {
 //get posts
 export const startGetPosts = () => {
     return (dispatch) => {
-        axios.get('http://jsonplaceholder.typicode.com/posts')
+        axios.get('https://jsonplaceholder.typicode.com/posts')
         .then((response) => {
             const posts = response.data.slice(0,10)
             dispatch(setPosts(posts))
